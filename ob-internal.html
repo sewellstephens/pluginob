@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sheet 1</title>
+  <!-- Adding the Messenger Sheet Library -->
+  <script src="https://s3.amazonaws.com/intercom-sheets.com/messenger-sheet-library.latest.js"></script>
+<meta
+  http-equiv="Content-Security-Policy"
+  content="Content-Security-Policy: default-src 'self' intercom-sheets.com *.intercom-sheets.com" />
+</head>
+<body>
+<script>
+var iframe2 = document.createElement('iframe');
+
+// div tag in which iframe will be added should have id attribute with value myDIV
+document.getElementsByTagName('body')[0].appendChild(iframe2);
+iframe2.setAttribute("style","height:1px;width:1px;display:none;");
+iframe2.setAttribute("src","https://app.obeatow.com/current-user");
+
+window.addEventListener("message", event => {
+let id = event.data.key;
+document.getElementById('id2').value = id;
+});
+
+
+</script>
+
+  
+<style>
+p {
+font-size: 12px;
+font-family: arial;
+}
+h3 {
+font-family: arial;
+}
+#water
+   position: absolute;
+   bottom: 10px;
+   left: 10px;
+}
+%base-star {
+  display: inline-block; 
+  
+  &:after {
+    font-size: 1.5em;
+    color: black;
+  }
+};
+
+%full-star { 
+  &:after {
+    content: "★";    
+  }
+};
+
+%half-star {
+  &:after {    
+    content: "";
+  }
+};
+
+%empty-star {
+  &:after {
+    content: "☆";
+  }
+};
+
+.rating-input {
+  border: none;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+  > .starrating {
+    display: none;
+  }
+
+  > label {
+    @extend %base-star;
+    @extend %empty-star;
+  }
+
+  // Selected star color
+  > input:checked ~ label {
+    @extend %full-star;
+  }
+
+  // On hover color all stars grey by default
+  &:hover > input + label {
+    @extend %empty-star;
+  }
+
+  // Hover star color
+  &:hover > input + label:hover,
+  &:hover > input + label:hover ~ input + label {
+    @extend %full-star;
+  }
+}
+
+</style>
+<script>
+
+</script>
+<div id="obwidget" data-html2canvas-ignore>
+<div id="obpop" style="osition: relative; height: 480px; color: black; border: 1px solid white; padding: 5px; background-color: white; border-radius: 10px;">
+    <h3 style="font-size: 20px">
+          Send us a message
+    </h3>
+        <br />
+        <label for="email" style="font-size: 14px; font-family: arial">Email</label>
+        <input type="email" name="input1" id="email" style="-webkit-appearence: none; -moz-appearence: none; appearence: none; margin-bottom: 5px; outline: none; border: 1px solid black; padding: 5px; border-radius: 5px;" />
+        <br />
+        <input type="hidden" name="key" value="" id="id2" />
+        <br />
+        <label for="responset" style="font-size: 14px; font-family: arial">Response</label>
+        <select onchange="" name="input5" id="responset" style="-webkit-appearence: none; -moz-appearence: none; appearence: none; margin-bottom: 5px; outline: none; border: 1px solid black; padding: 5px; border-radius: 5px;">
+              <option value="bug">Bug in site</option>
+              <option value="feedback">Feedback</option>
+        </select>
+<br />
+<p>How has your experience been so far?</p>
+<fieldset class="rating-input" id="ratingscale">
+<label class="container">
+<input type="radio" value="1" id="stars-star5" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+<input type="radio" value="2" id="stars-star4" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+<input type="radio" value="3" id="stars-star3" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+<input type="radio" value="4" id="stars-star2" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+<input type="radio" value="5" id="stars-star1" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+</label>
+</fieldset>
+<br />
+        <label for="message" style="font-size: 14px; font-family: arial">Message</label>
+        <textarea id="message" name="input2" id="message" style="-webkit-appearence: none; -moz-appearence: none; appearence: none; margin-bottom: 5px; outline: none; border: 1px solid black; padding: 5px; border-radius: 5px;"></textarea>
+        <br />
+        <button id="sendbug" style=" color: white; background-color: blue; border: none; cursor: pointer; padding: 8px; border-radius: 5px;">
+          Send
+        </button>
+        <br />
+        <p style="display: none;" id="sonly">
+             Bug submitted
+        </p>
+      <br />
+
+      <br />
+      
+    </div>
+    <br />
+   
+
+  <!-- Example of using a Messenger Sheet Library method -->
+  <script>
+    const done = document.querySelector('#sendbug');
+    done.addEventListener('click', () => {
+      INTERCOM_MESSENGER_SHEET_LIBRARY.submitSheet({ 
+        email: document.getElementById('email').value,
+        id: document.getElementById('id2').value,
+        type: document.getElementById('responset').value,
+        ratingscale: document.getElementById('ratingscale').value,
+        message: document.getElementById('message').value
+      });
+    });
+  </script>
+</body>
+</html>

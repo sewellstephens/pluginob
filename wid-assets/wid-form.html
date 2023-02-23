@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<script>
+window.addEventListener("message", event => {
+let plan = event.data.plan;
+let bgcolor = event.data.bgcolor;
+let key = event.data.key;
+
+document.getElementsByTagName('body')[0].innerHTML = `
+<style>
+a {
+  color: black;
+}
+p {
+font-size: 12px;
+font-family: arial;
+}
+h3 {
+font-family: arial;
+}
+.obframe {
+  width: 960px;
+  height: 100%;
+  overflow: hidden;
+  border: none;
+}
+.center {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100vh;
+}
+.abutton {font-size: 23px !important; padding-top: 15px !important; padding-bottom: 15px !important; border: none !important; background-color: white !important; width: 100% !important; text-align: center !important; cursor: pointer !important;}
+.abutton:hover {background-color: #cfedff !important;}
+input[type="radio"]{
+  display: none;
+}
+
+
+.container {
+  opacity: 0.5;
+}
+
+:checked + .container {
+  opacity: 1;
+}
+</style>
+<div data-html2canvas-ignore id="obframe">
+<h3 style="font-size: 20px">
+          Send us feedback
+    </h3>
+        <br />
+        <label for="email" style="font-size: 14px; font-family: arial">Email</label>
+        <input type="email" name="input1" id="email" style="-webkit-appearence: none; -moz-appearence: none; appearence: none; margin-bottom: 5px; outline: none; border: 1px solid black; padding: 5px; border-radius: 5px;" />
+        <br />
+        <input type="hidden" name="key" value="${key}" />
+        <br />
+        <label for="responset" style="font-size: 14px; font-family: arial">Response</label>
+        <select onchange="" name="input5" id="responset" style="-webkit-appearence: none; -moz-appearence: none; appearence: none; margin-bottom: 5px; outline: none; border: 1px solid black; padding: 5px; border-radius: 5px;">
+              <option value="bug">Bug in site</option>
+              <option value="feedback">Feedback</option>
+        </select>
+<br />
+<p>How has your experience been so far?</p>
+<fieldset class="rating-input">
+<label class="container" for="starsstars5">
+<img class="starc" src="https://plugin.obeatow.com/wid-assets/star.png" style="height: 30px;" />
+</label>
+<input type="radio" value="1" id="starsstar5" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+
+<label class="container" for="starsstars4">
+<img class="starc" src="https://plugin.obeatow.com/wid-assets/star.png" style="height: 30px;" />
+</label>
+<input type="radio" value="2" id="starsstar4" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+
+<label class="container" for="starsstars3">
+<img class="starc" src="https://plugin.obeatow.com/wid-assets/star.png" style="height: 30px;" />
+</label>
+<input type="radio" value="3" id="starsstar3" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+
+<label class="container" for="starsstars2">
+<img class="starc" src="https://plugin.obeatow.com/wid-assets/star.png" style="height: 30px;" />
+</label>
+<input type="radio" value="4" id="starsstar2" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+
+<label class="container" for="starsstars1">
+<img class="starc" src="https://plugin.obeatow.com/wid-assets/star.png" style="height: 30px;" />
+</label>
+<input type="radio" value="5" id="starsstar1" name="rating" class="starrating">-
+  <span class="checkmark"></span>
+
+</fieldset>
+<br />
+        <label for="message" style="font-size: 14px; font-family: arial">Message</label>
+        <textarea name="input2" id="message" style="-webkit-appearence: none; -moz-appearence: none; appearence: none; margin-bottom: 5px; outline: none; border: 1px solid black; padding: 5px; border-radius: 5px;"></textarea>
+        <br />
+        <button onclick="cdraw()" style=" color: white; background-color: ${bgcolor}; border: none; cursor: pointer; padding: 8px; border-radius: 5px;">
+          Add screenshot
+        </button>
+        <br />
+        <p style="display: none;" id="sonly">
+             Content submitted successfully
+        </p>
+      <br />
+      </div>
+`
+
+});
+</script>
+
+
+
+    </body>
+    </html>
