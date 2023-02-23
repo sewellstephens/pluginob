@@ -158,7 +158,7 @@ if (event.data === 'loaded success') {
 
 }
 else {
-
+ console.log("not ready");
 }
 }, 7000);
 setTimeout(() => {
