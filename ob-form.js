@@ -6,10 +6,7 @@ Open source iframe tracking.
 
 
 
-document.getElementsByTagName('body')[0].appendChild(iframe3);
-iframe3.setAttribute("style","height:1px;width:1px;display:none;");
-iframe3.setAttribute("src","https://plugin.obeatow.com/ob-send");
-iframe3.setAttribute("id","sendfetch");
+
 
 function sendbug(){
 
@@ -120,6 +117,12 @@ iframe3.setAttribute("src","https://plugin.obeatow.com/ob-send");
 iframe3.setAttribute("id","sendfetch");
 
 
+window.addEventListener("message", event => {
+
+
+    
+ 
+
     let msgr = `Email: ${input1}
     Page: ${input3}
     Type: ${input5}
@@ -148,9 +151,16 @@ var iframein = document.createElement('iframe');
 iframein.setAttribute("style","height:1px;width:1px;display:none;");
 iframein.setAttribute("src","https://app.obeatow.com/form-submit-api?key=" + key.innerText + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input5=" + input5 + "&starrating=" + radio);
 
+setTimeout(() => {
+if (event.data === 'loaded success') {
+
   postMessage(data3, "*");
 
+}
+else {
 
+}
+}, 7000);
 setTimeout(() => {
   saveBtn.innerHTML = 'Sent';
 }, 5000);
@@ -210,6 +220,7 @@ setTimeout(() => {
 
 
 });
+})
 }
 })
 

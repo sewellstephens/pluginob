@@ -1,6 +1,8 @@
 <script>
 
-/*window.addEventListener("message", event => {
+  top.postMessage("loaded success", "*");
+
+window.addEventListener("message", event => {
 
   
 if (event.data.siteid === 'ob-ftgyhuijihuygtfrfgyh') {
@@ -48,12 +50,5 @@ fetch('https://events.hookdeck.com/e/src_UUj0G2kTCMfR', {
 else {
 
 }
-});*/
-
-window.addEventListener("message", event => {
-
-    console.log(event.data);
-
-})
-
+});
 </script>
