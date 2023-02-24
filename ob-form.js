@@ -155,7 +155,7 @@ setTimeout(() => {
 if (event.data === 'loaded success') {
 
   postMessage(data3, "*");
-
+console.log(event.data);
 }
 else {
  console.log("not ready");
