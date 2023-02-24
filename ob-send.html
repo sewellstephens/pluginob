@@ -16,16 +16,21 @@ let type = event.data.type;
 let key = event.data.key;
 let screenofpage = event.data.screenofpage;
 let starrating = event.data.starrating;
+let daat1 = `Email: ${event.data.email}
+	Page: ${event.data.url}
+	Type: ${event.data.type}
+  Rating: ${event.data.starrating}
+	Message: ${event.data.realmessage}`;
 
 
 let subdata = {
       "email": email,
       "realmessage": realmessage,
-      "message": message,
+      "message": daat1,
       "url": url,
       "type": type,
       "key": key,
-      "screenofpage": screenofpage,
+      "screenshot": screenofpage,
       "starrating": starrating,
       "siteid": siteid
     }
