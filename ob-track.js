@@ -520,9 +520,10 @@ font-family: arial;
 }
 .height {
   line-height: normal !important;
+  font-family: arial !important;
 }
 h3 {
-font-family: arial;
+
 }
 .obframe {
   width: 960px;
@@ -539,6 +540,20 @@ font-family: arial;
   align-items: center;
   height: 100vh;
 }
+.fixed-wrapper {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:30px;
+  height:30px;
+}
+.fixed-wrapper .fixed {
+  position:fixed;
+}
+.mdsg {
+  margin-left: 5px;
+  line-height: 200%;
+}
 .abutton {font-size: 23px !important; padding-top: 15px !important; padding-bottom: 15px !important; border: none !important; background-color: white !important; width: 100% !important; text-align: center !important; cursor: pointer !important;}
 .abutton:hover {background-color: #cfedff !important;}
 </style>
@@ -547,9 +562,11 @@ font-family: arial;
 </script>
 <div id="obwidget">
 <div data-html2canvas-ignore id="obpop" style="position: relative; width: 200px; height: 340px; color: black; border: 1px solid white; padding: 5px; background-color: white; display: none; border-radius: 10px; box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -webkit-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -moz-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1);">
-    
-<br class="height" />
-<br class="height" />
+<div class="fixed-wrapper">
+  <div class="fixed">
+   <p class="mdsg">${message}</p>
+  </div>
+</div> 
 <br class="height" />
 <h3 class="height" style="font-size: 20px; text-align: center;">How can we help you?</h3>
 <br class="height" />
@@ -572,6 +589,11 @@ font-family: arial;
       </p>
     </div>
     <div data-html2canvas-ignore id="obpop1" style="position: relative; display: none; height: 280px; color: black; border: 1px solid white; padding: 5px; background-color: white; border-radius: 10px; box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -webkit-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -moz-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1);">
+    <div class="fixed-wrapper">
+  <div class="fixed">
+   <p class="mdsg">${message}</p>
+  </div>
+</div>
     <h3 class="height" style="font-size: 20px">
           Send us feedback
     </h3>
@@ -733,6 +755,20 @@ font-family: arial;
 #star5:hover { 
   transform: scale(1.2); 
 }
+.fixed-wrapper {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:30px;
+  height:30px;
+}
+.fixed-wrapper .fixed {
+  position:fixed;
+}
+.mdsg {
+  margin-left: 5px;
+  line-height: 200%;
+}
 .abutton {font-size: 23px !important; padding-top: 15px !important; padding-bottom: 15px !important; border: none !important; background-color: white !important; width: 100% !important; text-align: center !important; cursor: pointer !important;}
 .abutton:hover {background-color: #cfedff !important;}
 
@@ -744,11 +780,12 @@ font-family: arial;
 
 <div class="center">
 <div data-html2canvas-ignore id="obpop" style="position: relative; height: 280px; color: black; border: 1px solid white; padding: 5px; background-color: white; display: none; border-radius: 10px; box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -webkit-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -moz-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1);">
-    
-<br class="height" />
-<br class="height" />
-<br class="height" />
-<h3 class="height" style="font-size: 20px; text-align: center;">How was your experience?</h3>
+<div class="fixed-wrapper">
+  <div class="fixed">
+   <p class="mdsg">${message}</p>
+  </div>
+</div>
+<h3 class="height" class="headt" style="font-size: 20px; text-align: center;">How was your experience?</h3>
 <br class="height">
 <br class="height">
 <br class="height">
@@ -769,15 +806,15 @@ font-family: arial;
 <p class="height" style="text-align: center;"></p>
 <br>
 
-      <p id="water" class="waterm height">
-       ${message}
-      </p>
+      
       <br class="height" />
-      <p class="height" style="display: none;" id="sonly">
-       Bug submitted
-      </p>
     </div>
     <div data-html2canvas-ignore id="obpop1" style="position: relative; display: none; height: 280px; margin-left: 10px; color: black; border: 1px solid white; padding: 5px; background-color: white; border-radius: 10px; box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -webkit-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -moz-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1);">
+    <div class="fixed-wrapper">
+  <div class="fixed">
+   <p class="mdsg">${message}</p>
+  </div>
+</div>
     <h3 class="height" style="font-size: 20px">
           Send us feedback
     </h3>
@@ -805,9 +842,7 @@ font-family: arial;
              Content submitted successfully
         </p>
       <br class="height" />
-      <p class="height">
-       ${message}
-      </p>
+      
       <br class="height" />
       
     </div>
@@ -919,9 +954,10 @@ font-family: arial;
 }
 .height {
   line-height: normal !important;
+  font-family: arial !important;
 }
 h3 {
-font-family: arial;
+
 }
 .obframe {
   width: 960px;
@@ -938,6 +974,20 @@ font-family: arial;
   align-items: center;
   height: 100vh;
 }
+.fixed-wrapper {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:30px;
+  height:30px;
+}
+.fixed-wrapper .fixed {
+  position:fixed;
+}
+.mdsg {
+  margin-left: 5px;
+  line-height: 200%;
+}
 .abutton {font-size: 23px !important; padding-top: 15px !important; padding-bottom: 15px !important; border: none !important; background-color: white !important; width: 100% !important; text-align: center !important; cursor: pointer !important;}
 .abutton:hover {background-color: #cfedff !important;}
 </style>
@@ -946,9 +996,11 @@ font-family: arial;
 </script>
 <div id="obwidget">
 <div data-html2canvas-ignore id="obpop" style="position: relative; width: 200px; height: 340px; color: black; border: 1px solid white; padding: 5px; background-color: white; display: none; border-radius: 10px; box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -webkit-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -moz-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1);">
-    
-<br class="height" />
-<br class="height" />
+<div class="fixed-wrapper">
+  <div class="fixed">
+   <p class="mdsg">${message}</p>
+  </div>
+</div> 
 <br class="height" />
 <h3 class="height" style="font-size: 20px; text-align: center;">How can we help you?</h3>
 <br class="height" />
@@ -971,6 +1023,11 @@ font-family: arial;
       </p>
     </div>
     <div data-html2canvas-ignore id="obpop1" style="position: relative; display: none; height: 280px; color: black; border: 1px solid white; padding: 5px; background-color: white; border-radius: 10px; box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -webkit-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -moz-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1);">
+    <div class="fixed-wrapper">
+  <div class="fixed">
+   <p class="mdsg">${message}</p>
+  </div>
+</div>
     <h3 class="height" style="font-size: 20px">
           Send us feedback
     </h3>
@@ -1132,6 +1189,20 @@ font-family: arial;
 #star5:hover { 
   transform: scale(1.2); 
 }
+.fixed-wrapper {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:30px;
+  height:30px;
+}
+.fixed-wrapper .fixed {
+  position:fixed;
+}
+.mdsg {
+  margin-left: 5px;
+  line-height: 200%;
+}
 .abutton {font-size: 23px !important; padding-top: 15px !important; padding-bottom: 15px !important; border: none !important; background-color: white !important; width: 100% !important; text-align: center !important; cursor: pointer !important;}
 .abutton:hover {background-color: #cfedff !important;}
 
@@ -1143,11 +1214,12 @@ font-family: arial;
 
 <div class="center">
 <div data-html2canvas-ignore id="obpop" style="position: relative; height: 280px; color: black; border: 1px solid white; padding: 5px; background-color: white; display: none; border-radius: 10px; box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -webkit-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -moz-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1);">
-    
-<br class="height" />
-<br class="height" />
-<br class="height" />
-<h3 class="height" style="font-size: 20px; text-align: center;">How was your experience?</h3>
+<div class="fixed-wrapper">
+  <div class="fixed">
+   <p class="mdsg">${message}</p>
+  </div>
+</div>
+<h3 class="height" class="headt" style="font-size: 20px; text-align: center;">How was your experience?</h3>
 <br class="height">
 <br class="height">
 <br class="height">
@@ -1168,15 +1240,15 @@ font-family: arial;
 <p class="height" style="text-align: center;"></p>
 <br>
 
-      <p id="water" class="waterm height">
-       ${message}
-      </p>
+      
       <br class="height" />
-      <p class="height" style="display: none;" id="sonly">
-       Bug submitted
-      </p>
     </div>
     <div data-html2canvas-ignore id="obpop1" style="position: relative; display: none; height: 280px; margin-left: 10px; color: black; border: 1px solid white; padding: 5px; background-color: white; border-radius: 10px; box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -webkit-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1); -moz-box-shadow: 1px 1px 34px -13px rgba(0,0,0,1);">
+    <div class="fixed-wrapper">
+  <div class="fixed">
+   <p class="mdsg">${message}</p>
+  </div>
+</div>
     <h3 class="height" style="font-size: 20px">
           Send us feedback
     </h3>
@@ -1204,9 +1276,7 @@ font-family: arial;
              Content submitted successfully
         </p>
       <br class="height" />
-      <p class="height">
-       ${message}
-      </p>
+      
       <br class="height" />
       
     </div>
