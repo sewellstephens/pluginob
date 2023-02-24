@@ -304,8 +304,8 @@ font-family: arial;
 }
 .fixed-wrapper {
   position:absolute;
-  bottom:2;
-  left:2;
+  bottom:0;
+  left:0;
   width:30px;
   height:30px;
 }
