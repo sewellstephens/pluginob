@@ -1,5 +1,5 @@
 <script>
-
+  
   top.postMessage("loaded success", "*");
 
 window.addEventListener("message", event => {
@@ -34,7 +34,6 @@ fetch('https://events.hookdeck.com/e/src_UUj0G2kTCMfR', {
           method: 'POST', // or 'PUT'
           headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'https://plugin.obeatow.com',
           },
           body: JSON.stringify(subdata),
         })
