@@ -113,7 +113,7 @@ var iframe3 = document.createElement('iframe');
   
 document.getElementsByTagName('body')[0].appendChild(iframe3);
 iframe3.setAttribute("style","height:1px;width:1px;display:none;");
-iframe3.setAttribute("src","https://app.obeatow.com/post-msg-submit");
+iframe3.setAttribute("src","https://plugin.obeatow.com/ob-send");
 iframe3.setAttribute("id","sendfetch");
 
 
