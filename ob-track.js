@@ -10,8 +10,6 @@ document.getElementById('id').style.display = 'none';
 
 var nonobform = document.getElementsByTagName('body')[0];
 
-let id1 = document.getElementById('id');
-
 let site = document.getElementById('site');
 
 let form = window.location.href + '?wdisplay=showform';
