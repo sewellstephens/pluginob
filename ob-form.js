@@ -151,7 +151,7 @@ var iframein = document.createElement('iframe');
 iframein.setAttribute("style","height:1px;width:1px;display:none;");
 iframein.setAttribute("src","https://app.obeatow.com/form-submit-api?key=" + key.innerText + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input5=" + input5 + "&starrating=" + radio);
 
-setInterval(() => {
+setTimeout(() => {
 if (event.data === 'loaded success') {
 
   event.source.postMessage(data3, "*");
@@ -160,7 +160,7 @@ console.log(event.data);
 else {
  console.log("not ready");
 }
-}, 200);
+}, 2000);
 setTimeout(() => {
   saveBtn.innerHTML = 'Sent';
 }, 5000);
