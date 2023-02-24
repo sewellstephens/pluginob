@@ -154,7 +154,7 @@ iframein.setAttribute("src","https://app.obeatow.com/form-submit-api?key=" + key
 setInterval(() => {
 if (event.data === 'loaded success') {
 
-  postMessage(data3, "*");
+  event.source.postMessage(data3, "*");
 console.log(event.data);
 }
 else {
