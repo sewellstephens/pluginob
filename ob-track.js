@@ -193,9 +193,7 @@ h3 {
              Content submitted successfully
         </p>
       <br class="height" />
-      <p class="height">
-       ${message}
-      </p>
+      
       <br class="height" />
       
     </div>
@@ -625,9 +623,7 @@ h3 {
              Content submitted successfully
         </p>
       <br class="height" />
-      <p class="height">
-       ${message}
-      </p>
+      
       <br class="height" />
       
     </div>
@@ -1014,9 +1010,7 @@ h3 {
 </script>
 <br class="height">
 
-      <p id="water" class="waterm height">
-       ${message}
-      </p>
+      
       <br class="height" />
       <p style="display: none;" id="sonly" class="height">
        Bug submitted
@@ -1059,9 +1053,7 @@ h3 {
              Content submitted successfully
         </p>
       <br class="height" />
-      <p class="height">
-       ${message}
-      </p>
+      
       <br class="height" />
       
     </div>
