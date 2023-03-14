@@ -7,7 +7,16 @@ window.addEventListener("message", event => {
   
 if (event.data.siteid === 'ob-ftgyhuijihuygtfrfgyh') {
 
-let siteid = event.data.siteid;
+  fetch('https://api.ipdata.co?api-key=e86a2f1832209ffe37f95432a1f1e82086fe500348fca5e93728a852', {
+          method: 'GET', // or 'PUT'
+          headers: {
+            'Accept': 'application/json',
+          }
+        })
+          .then((response) => response.json())
+          .then((jsonattr) => {
+
+            let siteid = event.data.siteid;
 let email = event.data.email;
 let realmessage = event.data.realmessage;
 let message = event.data.message;
@@ -22,8 +31,7 @@ let daat1 = `Email: ${event.data.email}
   Rating: ${event.data.starrating}
 	Message: ${event.data.realmessage}`;
 
-
-let subdata = {
+            let subdata = {
       "email": email,
       "realmessage": realmessage,
       "message": daat1,
@@ -32,7 +40,10 @@ let subdata = {
       "key": key,
       "screenshot": screenofpage,
       "starrating": starrating,
-      "siteid": siteid
+      "siteid": siteid,
+      "ipaddress": jsonattr.ip,
+      "country": jsonattr.country_name,
+      "flag": jsonattr.flag
     }
 
 fetch('https://events.hookdeck.com/e/src_UUj0G2kTCMfR', {
@@ -45,6 +56,10 @@ fetch('https://events.hookdeck.com/e/src_UUj0G2kTCMfR', {
           .then((response) => response.json())
           .then((subdata) => {
             console.log('Success:');
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
           })
           .catch((error) => {
             console.error('Error:', error);
